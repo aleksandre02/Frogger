@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://iyvo05vmqofp"]
+
+[ext_resource type="PackedScene" uid="uid://dve160v0g68nv" path="res://scenes/line.tscn" id="1_i2p00"]
+
+[node name="groundline" type="Node2D"]
+
+[node name="Line" parent="." instance=ExtResource("1_i2p00")]

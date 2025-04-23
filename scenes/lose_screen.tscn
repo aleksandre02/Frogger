@@ -1,0 +1,244 @@
+[gd_scene load_steps=12 format=3 uid="uid://fs6nsrx8prkw"]
+
+[ext_resource type="Script" path="res://scripts/lose_screen.gd" id="1_3tukd"]
+[ext_resource type="FontFile" uid="uid://bhghxd2xodlb2" path="res://assets/fonts/I-pixel-u.ttf" id="2_6vxto"]
+[ext_resource type="Texture2D" uid="uid://iqp0thjdlafm" path="res://assets/trucks and sprites.png" id="3_7d5qn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dr0ot"]
+atlas = ExtResource("3_7d5qn")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ofr0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dr0ot")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30unn"]
+atlas = ExtResource("3_7d5qn")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t7aiv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30unn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_uk133"]
+resource_name = "car_animation"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("car_1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(250, 9), Vector2(-13, 9)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8ay6f"]
+_data = {
+"car_animation": SubResource("Animation_uk133")
+}
+
+[sub_resource type="Animation" id="Animation_fbxic"]
+resource_name = "car_animation2"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("car_2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-13, 35), Vector2(251, 35)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q3ybd"]
+_data = {
+"car_animation2": SubResource("Animation_fbxic")
+}
+
+[node name="lose_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3tukd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 238.0
+offset_bottom = 140.0
+color = Color(0.537255, 0.403922, 0.286275, 1)
+
+[node name="Restartbutton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = 24.0
+offset_right = 25.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_6vxto")
+theme_override_font_sizes/font_size = 8
+text = "RESTART"
+
+[node name="menubutton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -27.0
+offset_top = -23.0
+offset_right = 27.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_6vxto")
+theme_override_font_sizes/font_size = 7
+text = "MAIN MENU"
+
+[node name="you" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -11.5
+offset_top = 8.0
+offset_right = 11.5
+offset_bottom = 21.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_6vxto")
+theme_override_font_sizes/font_size = 17
+text = "YOU"
+
+[node name="lose" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -15.0
+offset_top = 30.0
+offset_right = 15.0
+offset_bottom = 43.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_6vxto")
+theme_override_font_sizes/font_size = 17
+text = "LOSE"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 2.0
+offset_top = 91.0
+offset_right = 80.0
+offset_bottom = 114.0
+theme_override_fonts/font = ExtResource("2_6vxto")
+theme_override_font_sizes/font_size = 6
+text = "HIGHEST SCORE:"
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_right = 72.0
+offset_bottom = 23.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_6vxto")
+theme_override_font_sizes/font_size = 8
+text = "SCORE:"
+
+[node name="Time" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_right = 5.0
+offset_bottom = 23.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_6vxto")
+theme_override_font_sizes/font_size = 8
+text = "TIME:"
+
+[node name="car_1" type="Node2D" parent="."]
+position = Vector2(250, 10)
+
+[node name="ColorRect" type="ColorRect" parent="car_1"]
+offset_left = -204.0
+offset_top = -9.0
+offset_right = 13.0
+offset_bottom = 15.0
+color = Color(0.537255, 0.403922, 0.286275, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="car_1"]
+position = Vector2(1.52588e-05, 0)
+scale = Vector2(1.625, 1.375)
+sprite_frames = SubResource("SpriteFrames_8ofr0")
+
+[node name="car_2" type="Node2D" parent="."]
+position = Vector2(-13, 37)
+
+[node name="ColorRect2" type="ColorRect" parent="car_2"]
+offset_left = -11.0
+offset_top = -11.0
+offset_right = 206.0
+offset_bottom = 12.0
+color = Color(0.537255, 0.403922, 0.286275, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="car_2"]
+position = Vector2(1.90735e-06, 0)
+rotation = 3.14159
+scale = Vector2(1.538, 1.375)
+sprite_frames = SubResource("SpriteFrames_t7aiv")
+
+[node name="car_1_anim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8ay6f")
+}
+autoplay = "car_animation"
+speed_scale = 4.0
+
+[node name="car_1_anim2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_q3ybd")
+}
+autoplay = "car_animation2"
+speed_scale = 4.0
+
+[connection signal="pressed" from="Restartbutton" to="." method="_on_restartbutton_pressed"]
+[connection signal="pressed" from="menubutton" to="." method="_on_menubutton_pressed"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkngqqm4cgjd6"]
+
+[ext_resource type="PackedScene" uid="uid://iyvo05vmqofp" path="res://scenes/groundline.tscn" id="1_drhbm"]
+[ext_resource type="PackedScene" uid="uid://crjmbolo875jm" path="res://scenes/waterline.tscn" id="2_i2ur3"]
+
+[node name="terrain_6" type="Node2D"]
+position = Vector2(0, -48)
+
+[node name="groundline" parent="." instance=ExtResource("1_drhbm")]
+
+[node name="groundline2" parent="." instance=ExtResource("1_drhbm")]
+position = Vector2(2.08165e-12, -16)
+
+[node name="waterline" parent="." instance=ExtResource("2_i2ur3")]
+position = Vector2(2.08165e-12, -32)
+
+[node name="groundline3" parent="." instance=ExtResource("1_drhbm")]
