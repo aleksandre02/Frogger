@@ -1,6 +1,6 @@
 extends Node2D
 
-var flag:bool = true
+
 var frog_entered = false
 
 func _on_area_2d_body_entered(body):

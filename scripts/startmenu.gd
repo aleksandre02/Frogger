@@ -1,5 +1,6 @@
 extends Control
 
+
 var game_node = preload("res://scenes/game.tscn")
 
 func _on_exitbutton_pressed():

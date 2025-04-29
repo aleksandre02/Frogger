@@ -1,9 +1,8 @@
 extends Control
 
-var game_node = preload("res://scenes/game.tscn")
 
 func _on_menubutton_pressed():
-	get_tree().change_scene_to_file("res://scenes/startmenu.tscn")
+	get_tree().change_scene_to_file("res://scenes/startMenu.tscn")
 
 func _on_restartbutton_pressed():
 	get_tree().change_scene_to_file("res://scenes/game.tscn")

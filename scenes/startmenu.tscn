@@ -1,11 +1,11 @@
 [gd_scene load_steps=16 format=3 uid="uid://bx0cxg776tp4d"]
 
-[ext_resource type="Script" path="res://scripts/startmenu.gd" id="1_3f6c6"]
-[ext_resource type="FontFile" uid="uid://bhghxd2xodlb2" path="res://assets/fonts/I-pixel-u.ttf" id="1_gqyqr"]
-[ext_resource type="Texture2D" uid="uid://ca6wtq25nvmxg" path="res://assets/index.png" id="2_vklfj"]
+[ext_resource type="Script" path="res://scripts/startMenu.gd" id="1_o7jg7"]
+[ext_resource type="FontFile" uid="uid://bhghxd2xodlb2" path="res://assets/fonts/I-pixel-u.ttf" id="2_yvprj"]
+[ext_resource type="Texture2D" uid="uid://ca6wtq25nvmxg" path="res://assets/index.png" id="3_1hmm7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_x1pia"]
-font = ExtResource("1_gqyqr")
+font = ExtResource("2_yvprj")
 
 [sub_resource type="Animation" id="Animation_1dqv0"]
 resource_name = "left_frog"
@@ -46,11 +46,11 @@ _data = {
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yfyb8"]
-atlas = ExtResource("2_vklfj")
+atlas = ExtResource("3_1hmm7")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pa8h2"]
-atlas = ExtResource("2_vklfj")
+atlas = ExtResource("3_1hmm7")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qe2ri"]
@@ -68,11 +68,11 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2yts6"]
-atlas = ExtResource("2_vklfj")
+atlas = ExtResource("3_1hmm7")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p3svk"]
-atlas = ExtResource("2_vklfj")
+atlas = ExtResource("3_1hmm7")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_orj1v"]
@@ -117,7 +117,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_3f6c6")
+script = ExtResource("1_o7jg7")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -139,7 +139,7 @@ offset_bottom = 61.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.619608, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_gqyqr")
+theme_override_fonts/font = ExtResource("2_yvprj")
 theme_override_font_sizes/font_size = 10
 text = "EXIT"
 flat = true
@@ -158,7 +158,7 @@ offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0.427451, 0, 1)
-theme_override_fonts/font = ExtResource("1_gqyqr")
+theme_override_fonts/font = ExtResource("2_yvprj")
 text = "PLAY"
 flat = true
 
@@ -209,7 +209,7 @@ layout_mode = 0
 offset_top = 41.0
 offset_right = 60.0
 offset_bottom = 64.0
-theme_override_fonts/font = ExtResource("1_gqyqr")
+theme_override_fonts/font = ExtResource("2_yvprj")
 theme_override_font_sizes/font_size = 8
 text = "HIGH SCORE:"
 

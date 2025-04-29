@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 @onready var animated_sprite = $AnimatedSprite2D
 
 signal frog_die
@@ -28,4 +29,4 @@ func _process(delta):
 func _on_area_2d_area_entered(area):
 	emit_signal("frog_die")
 	if area.can_kill:
-		get_tree().change_scene_to_file("res://scenes/lose_screen.tscn")
+		get_tree().change_scene_to_file("res://scenes/loseScreen.tscn")

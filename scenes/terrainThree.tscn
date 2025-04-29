@@ -1,30 +1,30 @@
 [gd_scene load_steps=5 format=3 uid="uid://cytwv00oeq07v"]
 
-[ext_resource type="PackedScene" uid="uid://crjmbolo875jm" path="res://scenes/waterline.tscn" id="1_8pdwg"]
-[ext_resource type="Script" path="res://scripts/terrain_3.gd" id="1_h1e27"]
-[ext_resource type="PackedScene" uid="uid://iyvo05vmqofp" path="res://scenes/groundline.tscn" id="2_8f885"]
+[ext_resource type="Script" path="res://scripts/terrainScript.gd" id="1_5qc75"]
+[ext_resource type="PackedScene" uid="uid://crjmbolo875jm" path="res://scenes/waterLine.tscn" id="2_cgt14"]
+[ext_resource type="PackedScene" uid="uid://iyvo05vmqofp" path="res://scenes/groundLine.tscn" id="3_anom2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uphnp"]
 size = Vector2(238, 20)
 
 [node name="terrain_3" type="Node2D"]
-script = ExtResource("1_h1e27")
+script = ExtResource("1_5qc75")
 
-[node name="waterline" parent="." instance=ExtResource("1_8pdwg")]
+[node name="waterline" parent="." instance=ExtResource("2_cgt14")]
 
-[node name="groundline" parent="." instance=ExtResource("2_8f885")]
+[node name="groundline" parent="." instance=ExtResource("3_anom2")]
 position = Vector2(2.08165e-12, -16)
 
 [node name="Line" parent="groundline" index="0"]
 is_left = true
 
-[node name="groundline3" parent="." instance=ExtResource("2_8f885")]
+[node name="groundline3" parent="." instance=ExtResource("3_anom2")]
 position = Vector2(-1, -32)
 
 [node name="Line" parent="groundline3" index="0"]
 is_left = true
 
-[node name="groundline2" parent="." instance=ExtResource("2_8f885")]
+[node name="groundline2" parent="." instance=ExtResource("3_anom2")]
 position = Vector2(0, -48)
 
 [node name="Area2D" type="Area2D" parent="."]

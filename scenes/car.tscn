@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bonew0aqvspuy"]
 
-[ext_resource type="Script" path="res://scripts/car.gd" id="1_pwsap"]
+[ext_resource type="Script" path="res://scripts/killableObjects.gd" id="1_uj5ku"]
 [ext_resource type="Texture2D" uid="uid://iqp0thjdlafm" path="res://assets/trucks and sprites.png" id="1_yb14e"]
 [ext_resource type="Texture2D" uid="uid://ddp3lbcegi5pw" path="res://assets/DesertTilemapBlankBackground.png" id="2_xkqci"]
 
@@ -197,7 +197,8 @@ sources/1 = SubResource("TileSetAtlasSource_5l0pj")
 size = Vector2(14, 14)
 
 [node name="car" type="Area2D"]
-script = ExtResource("1_pwsap")
+script = ExtResource("1_uj5ku")
+can_kill = true
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-8, -8)

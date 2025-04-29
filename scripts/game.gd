@@ -1,8 +1,9 @@
 extends Node2D
 
+
 @onready var frog_node = $frog
 @onready var spawn_position_node = $spawnPosition
-@onready var terrain_spawn_point1 = $terrain_spawn_first
+@onready var terrain_spawn_point = $terrain_spawn_first
 @onready var road_container_node = $road_container
 @onready var hud_node = $Node2D/Hud
 @onready var score_marker_node = $score_marker
@@ -13,7 +14,6 @@ var frog_position_x
 var rng = RandomNumberGenerator.new()
 
 var frog_entered:bool = false
-
 
 func save_score(value):
 	if load_score() < value:
@@ -56,13 +56,12 @@ func _process(delta):
 	if frog_node.global_position.y >= 104:
 		frog_node.global_position = spawn_position_node.global_position
 
-		
 func generate_terrain():
 	var terrain_random_scene = terrain_array.pick_random()
 	var terrain_scene = load(terrain_random_scene)
 	var terrain_instance = terrain_scene.instantiate()
 	road_container_node.add_child(terrain_instance)
-	terrain_instance.global_position.y = terrain_spawn_point1.global_position.y
+	terrain_instance.global_position.y = terrain_spawn_point.global_position.y
 
 func _on_timer_timeout():
 	Global.time += 1

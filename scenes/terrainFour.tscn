@@ -1,29 +1,29 @@
 [gd_scene load_steps=4 format=3 uid="uid://cpwk12bew2v4c"]
 
-[ext_resource type="Script" path="res://scripts/terrain_4.gd" id="1_fsyjp"]
-[ext_resource type="PackedScene" uid="uid://iyvo05vmqofp" path="res://scenes/groundline.tscn" id="1_soham"]
+[ext_resource type="Script" path="res://scripts/terrainScript.gd" id="1_oisiq"]
+[ext_resource type="PackedScene" uid="uid://iyvo05vmqofp" path="res://scenes/groundLine.tscn" id="2_jvmdr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yea3p"]
 size = Vector2(238, 20)
 
 [node name="terrain_4" type="Node2D"]
-script = ExtResource("1_fsyjp")
+script = ExtResource("1_oisiq")
 
-[node name="groundline" parent="." instance=ExtResource("1_soham")]
+[node name="groundline" parent="." instance=ExtResource("2_jvmdr")]
 
 [node name="Line" parent="groundline" index="0"]
 is_left = true
 
-[node name="groundline2" parent="." instance=ExtResource("1_soham")]
+[node name="groundline2" parent="." instance=ExtResource("2_jvmdr")]
 position = Vector2(2.08165e-12, -16)
 
-[node name="groundline3" parent="." instance=ExtResource("1_soham")]
+[node name="groundline3" parent="." instance=ExtResource("2_jvmdr")]
 position = Vector2(2.08165e-12, -32)
 
 [node name="Line" parent="groundline3" index="0"]
 is_left = true
 
-[node name="groundline4" parent="." instance=ExtResource("1_soham")]
+[node name="groundline4" parent="." instance=ExtResource("2_jvmdr")]
 position = Vector2(2.08165e-12, -48)
 
 [node name="Area2D" type="Area2D" parent="."]

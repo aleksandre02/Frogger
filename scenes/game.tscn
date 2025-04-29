@@ -2,12 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://ddp3lbcegi5pw" path="res://assets/DesertTilemapBlankBackground.png" id="1_gi7lq"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_jyg1g"]
-[ext_resource type="Script" path="res://scripts/road_container.gd" id="2_nfnck"]
+[ext_resource type="Script" path="res://scripts/roadContainer.gd" id="2_6yma2"]
 [ext_resource type="PackedScene" uid="uid://dyfckt5l4cgcf" path="res://scenes/frog.tscn" id="2_wwvi6"]
-[ext_resource type="PackedScene" uid="uid://bbl2bgo2gqf4i" path="res://scenes/terrain_1.tscn" id="5_h2xaj"]
-[ext_resource type="Script" path="res://scripts/score_marker.gd" id="5_ktsws"]
+[ext_resource type="PackedScene" uid="uid://bbl2bgo2gqf4i" path="res://scenes/terrainOne.tscn" id="3_02g5k"]
+[ext_resource type="Script" path="res://scripts/killableObjects.gd" id="5_2jv88"]
 [ext_resource type="PackedScene" uid="uid://dg6jtqj58xmwy" path="res://scenes/hud.tscn" id="5_ucfa4"]
-[ext_resource type="PackedScene" uid="uid://sv54eroqo6ni" path="res://scenes/pause_menu.tscn" id="8_rhpdt"]
+[ext_resource type="PackedScene" uid="uid://sv54eroqo6ni" path="res://scenes/pauseMenu.tscn" id="8_12a5i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pvga2"]
 texture = ExtResource("1_gi7lq")
@@ -526,9 +526,9 @@ size = Vector2(240, 16)
 script = ExtResource("1_jyg1g")
 
 [node name="road_container" type="Node2D" parent="."]
-script = ExtResource("2_nfnck")
+script = ExtResource("2_6yma2")
 
-[node name="terrain_1" parent="road_container" instance=ExtResource("5_h2xaj")]
+[node name="terrain_1" parent="road_container" instance=ExtResource("3_02g5k")]
 position = Vector2(2.08165e-12, 16)
 
 [node name="road" type="TileMap" parent="."]
@@ -543,7 +543,7 @@ layer_1/tile_data = PackedInt32Array()
 
 [node name="score_marker" type="Area2D" parent="."]
 position = Vector2(119, 102)
-script = ExtResource("5_ktsws")
+script = ExtResource("5_2jv88")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="score_marker"]
 position = Vector2(0, -62)
@@ -557,12 +557,6 @@ position = Vector2(119, 103)
 
 [node name="terrain_spawn_first" type="Marker2D" parent="."]
 
-[node name="terrain_spawn_second" type="Marker2D" parent="."]
-position = Vector2(2.08165e-12, -80)
-
-[node name="terrain_spawn_third" type="Marker2D" parent="."]
-position = Vector2(2.08165e-12, -144)
-
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
@@ -573,7 +567,7 @@ z_index = 10
 offset_top = -45.0
 offset_bottom = -45.0
 
-[node name="pause_menu" parent="Node2D/Hud" instance=ExtResource("8_rhpdt")]
+[node name="pause_menu" parent="Node2D/Hud" instance=ExtResource("8_12a5i")]
 visible = false
 layout_mode = 1
 offset_top = 14.0

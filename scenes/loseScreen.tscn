@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://fs6nsrx8prkw"]
 
-[ext_resource type="Script" path="res://scripts/lose_screen.gd" id="1_3tukd"]
-[ext_resource type="FontFile" uid="uid://bhghxd2xodlb2" path="res://assets/fonts/I-pixel-u.ttf" id="2_6vxto"]
-[ext_resource type="Texture2D" uid="uid://iqp0thjdlafm" path="res://assets/trucks and sprites.png" id="3_7d5qn"]
+[ext_resource type="Script" path="res://scripts/loseScreen.gd" id="1_efb4g"]
+[ext_resource type="FontFile" uid="uid://bhghxd2xodlb2" path="res://assets/fonts/I-pixel-u.ttf" id="2_ykjnd"]
+[ext_resource type="Texture2D" uid="uid://iqp0thjdlafm" path="res://assets/trucks and sprites.png" id="3_cf7lr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dr0ot"]
-atlas = ExtResource("3_7d5qn")
+atlas = ExtResource("3_cf7lr")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ofr0"]
@@ -20,7 +20,7 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_30unn"]
-atlas = ExtResource("3_7d5qn")
+atlas = ExtResource("3_cf7lr")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t7aiv"]
@@ -76,14 +76,14 @@ _data = {
 "car_animation2": SubResource("Animation_fbxic")
 }
 
-[node name="lose_screen" type="Control"]
+[node name="loseScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_3tukd")
+script = ExtResource("1_efb4g")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -104,9 +104,10 @@ offset_right = 25.0
 offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_6vxto")
+theme_override_fonts/font = ExtResource("2_ykjnd")
 theme_override_font_sizes/font_size = 8
 text = "RESTART"
+flat = true
 
 [node name="menubutton" type="Button" parent="."]
 layout_mode = 1
@@ -121,9 +122,10 @@ offset_right = 27.0
 offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("2_6vxto")
+theme_override_fonts/font = ExtResource("2_ykjnd")
 theme_override_font_sizes/font_size = 7
 text = "MAIN MENU"
+flat = true
 
 [node name="you" type="Label" parent="."]
 layout_mode = 1
@@ -136,7 +138,7 @@ offset_right = 11.5
 offset_bottom = 21.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_6vxto")
+theme_override_fonts/font = ExtResource("2_ykjnd")
 theme_override_font_sizes/font_size = 17
 text = "YOU"
 
@@ -151,7 +153,7 @@ offset_right = 15.0
 offset_bottom = 43.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_6vxto")
+theme_override_fonts/font = ExtResource("2_ykjnd")
 theme_override_font_sizes/font_size = 17
 text = "LOSE"
 
@@ -162,7 +164,7 @@ offset_left = 2.0
 offset_top = 91.0
 offset_right = 80.0
 offset_bottom = 114.0
-theme_override_fonts/font = ExtResource("2_6vxto")
+theme_override_fonts/font = ExtResource("2_ykjnd")
 theme_override_font_sizes/font_size = 6
 text = "HIGHEST SCORE:"
 
@@ -175,7 +177,7 @@ offset_left = 24.0
 offset_right = 72.0
 offset_bottom = 23.0
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_6vxto")
+theme_override_fonts/font = ExtResource("2_ykjnd")
 theme_override_font_sizes/font_size = 8
 text = "SCORE:"
 
@@ -191,7 +193,7 @@ offset_right = 5.0
 offset_bottom = 23.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_6vxto")
+theme_override_fonts/font = ExtResource("2_ykjnd")
 theme_override_font_sizes/font_size = 8
 text = "TIME:"
 

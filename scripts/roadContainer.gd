@@ -1,12 +1,10 @@
 extends Node2D
 
 
-@onready var terrain_1 = "res://scenes/terrain_1.tscn"
-@onready var terrain_2 = "res://scenes/terrain_2.tscn"
-@onready var terrain_3 = "res://scenes/terrain_3.tscn"
-@onready var terrain_4 = "res://scenes/terrain_4.tscn"
-@onready var terrain_5 = "res://scenes/terrain_5.tscn"
-
+@onready var terrain_1 = "res://scenes/terrainOne.tscn"
+@onready var terrain_2 = "res://scenes/terrainTwo.tscn"
+@onready var terrain_3 = "res://scenes/terrainThree.tscn"
+@onready var terrain_4 = "res://scenes/terrainFour.tscn"
 
 var terrain_array 
 

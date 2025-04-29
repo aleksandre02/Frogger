@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dri2nm8g1x3ln"]
 
 [ext_resource type="Texture2D" uid="uid://ddp3lbcegi5pw" path="res://assets/DesertTilemapBlankBackground.png" id="1_2cp7l"]
-[ext_resource type="Script" path="res://scripts/interactableNode.gd" id="1_bcu2t"]
+[ext_resource type="Script" path="res://scripts/killableObjects.gd" id="1_8sfky"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ptwvw"]
 texture = ExtResource("1_2cp7l")
@@ -180,7 +180,8 @@ sources/0 = SubResource("TileSetAtlasSource_ptwvw")
 size = Vector2(14, 14)
 
 [node name="water" type="Area2D" groups=["water"]]
-script = ExtResource("1_bcu2t")
+script = ExtResource("1_8sfky")
+can_kill = true
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-8, -8)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://sv54eroqo6ni"]
 
-[ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_45284"]
+[ext_resource type="Script" path="res://scripts/pauseMenu.gd" id="1_jdt1d"]
 [ext_resource type="FontFile" uid="uid://bhghxd2xodlb2" path="res://assets/fonts/I-pixel-u.ttf" id="2_h3sf7"]
 
 [node name="pause_menu" type="Control"]
@@ -11,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_45284")
+script = ExtResource("1_jdt1d")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0

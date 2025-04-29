@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cqipf2uc6gjtr"]
 
 [ext_resource type="Texture2D" uid="uid://ddp3lbcegi5pw" path="res://assets/DesertTilemapBlankBackground.png" id="1_3x7kp"]
-[ext_resource type="Script" path="res://scripts/ground.gd" id="1_kjsbg"]
+[ext_resource type="Script" path="res://scripts/killableObjects.gd" id="1_rcfbp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hd2x"]
 size = Vector2(16, 16)
@@ -181,7 +181,7 @@ sources/0 = SubResource("TileSetAtlasSource_bnutb")
 
 [node name="ground" type="Area2D"]
 rotation = -6.28319
-script = ExtResource("1_kjsbg")
+script = ExtResource("1_rcfbp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4.76837e-07, 0)

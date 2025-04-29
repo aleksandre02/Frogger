@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://brsrkk3tws3wu"]
+[gd_scene load_steps=3 format=3 uid="uid://ct5rdg15f534d"]
 
-[ext_resource type="PackedScene" uid="uid://crjmbolo875jm" path="res://scenes/waterline.tscn" id="1_nyyi7"]
-[ext_resource type="PackedScene" uid="uid://iyvo05vmqofp" path="res://scenes/groundline.tscn" id="2_u3mr0"]
+[ext_resource type="PackedScene" uid="uid://crjmbolo875jm" path="res://scenes/waterLine.tscn" id="1_nyyi7"]
+[ext_resource type="PackedScene" uid="uid://iyvo05vmqofp" path="res://scenes/groundLine.tscn" id="2_u3mr0"]
 
 [node name="terrain_5" type="Node2D"]
 
